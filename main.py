@@ -90,10 +90,10 @@ def trainRouteClient():
         return Response("Error Occurred! %s" % e)
     return Response("Training successfull!!")
 
-#port = int(os.getenv("PORT",5001))
+port = int(os.getenv("PORT",80))
 if __name__ == "__main__":
     #app.run(port=port,debug=True)
-    httpd = simple_server.make_server(host='0.0.0.0', port=80, app=app)
+    httpd = simple_server.make_server(host='0.0.0.0', port=port, app=app)
     #httpd = simple_server.make_server(host='127.0.0.1', port=5000, app=app)
     # print("Serving on %s %d" % (host, port))
     httpd.serve_forever()
