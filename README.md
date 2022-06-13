@@ -1,5 +1,5 @@
 
-# Insurance Fraud Detecion
+# Insurance Fraud Detection
 
 Machine Learning application to detect if an insurance claim is fraudulent or not
 
