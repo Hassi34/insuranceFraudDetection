@@ -38,19 +38,10 @@ Start the server
 
 ## Usage/Examples 
 ## REST API
-### Training 
-```javascript
-import requests
-res = requests.post('https://insurancefrauddetection.azurewebsites.net/train', json={"filepath" : ["SharedFolderName"]})
-if res.ok:
-    print(res.text)
-else :
-    print(res)
-```
 ### Prediction
 ```javascript
 import requests
-res = requests.post('https://insurancefrauddetection.azurewebsites.net/predict', json={"filepath" : ["FolderName"]})
+res = requests.post('https://insurancefrauddetection.azurewebsites.net/predict', json={"filepath" : "Prediction_Batch_files"})
 if res.ok:
     print(res.text)
 else :
