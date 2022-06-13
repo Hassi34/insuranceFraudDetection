@@ -7,7 +7,7 @@ Machine Learning application to detect if an insurance claim is fraudulent or no
 
 
 ## 🔗 Project Links
-Check out the deployed app [here](https://duplicate-question-pair.herokuapp.com/)
+Check out the deployed app [here](https://insurancefrauddetection.azurewebsites.net)
 
 ## Run Locally
 
@@ -38,9 +38,19 @@ Start the server
 
 ## Usage/Examples 
 ## REST API
+### Training 
 ```javascript
 import requests
-res = requests.post('https://duplicate-question-pair.herokuapp.com/predict_duplicates', json={"question1" : ["Will AI be in demand in future ?"]})
+res = requests.post('https://insurancefrauddetection.azurewebsites.net/train', json={"filepath" : ["SharedFolderName"]})
+if res.ok:
+    print(res.text)
+else :
+    print(res)
+```
+### Prediction
+```javascript
+import requests
+res = requests.post('https://insurancefrauddetection.azurewebsites.net/predict', json={"filepath" : ["FolderName"]})
 if res.ok:
     print(res.text)
 else :
